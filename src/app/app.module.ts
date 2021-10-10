@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HabitListComponent } from './habit-list/habit-list.component';
+import { HabitDetailComponent } from './habit-detail/habit-detail.component';
+import { HabitItemComponent } from './habit-item/habit-item.component';
+import { HabitFormComponent } from './habit-form/habit-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    HabitListComponent,
+    HabitDetailComponent,
+    HabitItemComponent,
+    HabitFormComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
